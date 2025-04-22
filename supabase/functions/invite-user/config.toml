@@ -1,0 +1,8 @@
+
+project_id = "iseemjooeveamnkknijs"
+
+[deploy]
+tags = ["roles"]
+
+[functions.invite-user.environment]
+SITE_URL = "https://preview--geo-inventory-master.lovable.app"

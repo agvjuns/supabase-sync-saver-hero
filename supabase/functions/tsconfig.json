@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    // Enable latest features
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowImportingTsExtensions": true, // Allow '.ts' extensions in imports
+    "noEmit": true, // Do not emit output files (Deno handles execution)
+    "emitDeclarationOnly": false, // Explicitly false alongside noEmit
+    "target": "esnext",
+    // Enable stricter checking for better code quality
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // Enable module resolution strategies
+    "module": "esnext",
+    "moduleResolution": "bundler", // or "node" if preferred, bundler is often better for Deno/URL imports
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    // Support URL imports
+    "allowJs": true, // Allow JavaScript files to be imported
+    "checkJs": false, // Don't type-check JS files by default
+    // Misc
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true, // Required for some bundlers/transpilers
+    "jsx": "react-jsx", // Assuming React might be used in some functions, adjust if not
+    "jsxImportSource": "https://esm.sh/react@18.2.0", // Adjust if using a different JSX runtime or version
+    // Specify the root directory for source files if needed
+    // "rootDir": ".",
+    // Specify the output directory if needed (usually not needed for Deno functions)
+    // "outDir": "./dist",
+    // Path mapping if using aliases (ensure baseUrl is set if using paths)
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@shared/*": ["./_shared/*"]
+    // }
+  },
+  "include": ["**/*.ts", "**/*.tsx"], // Include all TS/TSX files in this directory and subdirectories
+  "exclude": ["node_modules"] // Exclude node_modules if present
+}
